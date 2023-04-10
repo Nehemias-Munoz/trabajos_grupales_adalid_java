@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+section{
+    margin: 2em;
+}
+
+img{
+    border: 2px solid blueviolet ;
+    border-radius: 5px;
+}
+
+footer{
+    padding: 1rem;
+}
