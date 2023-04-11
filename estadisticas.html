@@ -10,6 +10,10 @@
       integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.css"
+    />
     <title>Document</title>
   </head>
   <body>
@@ -24,7 +28,8 @@
             data-bs-target="#navbarNavAltMarkup"
             aria-controls="navbarNavAltMarkup"
             aria-expanded="false"
-            aria-label="Toggle navigation">
+            aria-label="Toggle navigation"
+          >
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
@@ -48,111 +53,271 @@
       <section class="container">
         <article class="row mt-5">
           <div class="col">
-            <table class="table table-striped">
+            <table class="table table-striped" id="myTable">
               <thead>
-                <th scope="col">#</th>
-                <th scope="col">Stock Inicial</th>
-                <th scope="col">Ventas Diarias</th>
-                <th scope="col">Stock Final</th>
-                <th scope="col">Precio</th>
-                <th scope="col">Valor Total</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">1</th>
-            <td>320</td>
-            <td>12</td>
-            <td>308</td>
-            <td>$3500</td>
-            <td>= 308*$3500</td>
-          </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>120</td>
-              <td>20</td>
-              <td>100</td>
-              <td>$1200</td>
-              <td>= 100*$1200</td>
-           </tr> 
-              <tr>
-                <th scope="row">3</th>
-              <td>315</td>
-              <td>16</td>
-              <td>299</td>
-              <td>$1500</td>
-              <td>= 299*$1500</td>
-              </tr>
-              <tr>
-                <th scope="row">4</th>
-              <td>405</td>
-              <td>15</td>
-              <td>390</td>
-              <td>$2200</td>
-              <td>= 390*2200</td>
-              </tr>
-              <tr>
-                <th scope="row">5</th>
-                  <td>550</td>
-                  <td>50</td>
-                  <td>500</td>
-                  <td>$5500</td>
-                  <td>= 500*5500</td>
-              </tr>
                 <tr>
-                  <th scope="row">6</th>
-                  <td>10</td>
-                  <td>2</td>
-                  <td>8</td>
-                  <td>$22000</td>
-                  <td>= 8*$22000</td>
+                  <th scope="col">Nombre</th>
+                  <th scope="col">Apellido(s)</th>
+                  <th scope="col">Genero</th>
+                  <th scope="col">Activo</th>
+                  <th scope="col">Rol</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Gonzalo Leonardo</td>
+                  <td>Alonzo Mancilla</td>
+                  <td>Masculino</td>
+                  <td>SI</td>
+                  <td>Coder</td>
                 </tr>
                 <tr>
-                  <th scope="row">7</th>
-              <td>100</td>
-              <td>20</td>
-              <td>80</td>
-              <td>$2000</td>
-              <td>= 88*$2000</td>
-              </tr>
-              <tr>
-                <th scope="row">8</th>
-                <td>1000</td>
-                <td>2</td>
-                <td>998</td>
-                <td>$1500</td>
-                <td>= 998*$1500</td>
-              </tr>
+                  <td>Ignacio Andrés</td>
+                  <td>Aranguiz Vildosola</td>
+                  <td>Masculino</td>
+                  <td>SI</td>
+                  <td>Coder</td>
+                </tr>
                 <tr>
-                  <th scope="row">9</th>
-              <td>8</td>
-              <td>2</td>
-              <td>6</td>
-              <td>$150000</td>
-              <td>= 6*$150000</td>
-              </tr>
-              <tr>
-              <th scope="row">10</th>
-              <td>132</td>
-              <td>32</td>
-              <td>100</td>
-              <td>$1400</td>
-              <td>= 100*$1400</td>
-              </tr>
-              <tr>
-                <th scope="row">11</th>
-              <td>250</td>
-              <td>40</td>
-              <td>210</td>
-              <td>$2000</td>
-              <td>= 210*$2000</td>          
-              </tr>
+                  <td>Joaquín Ignacio</td>
+                  <td>Baeza Sanhueza</td>
+                  <td>Masculino</td>
+                  <td>SI</td>
+                  <td>Coder</td>
+                </tr>
+                <tr>
+                  <td>Jocelyn Nataly</td>
+                  <td>Balcázar Vera</td>
+                  <td>Femenino</td>
+                  <td>NO</td>
+                  <td>Coder</td>
+                </tr>
+                <tr>
+                  <td>Felipe Andrés</td>
+                  <td>Bascuñán Fica</td>
+                  <td>Masculino</td>
+                  <td>SI</td>
+                  <td>Coder</td>
+                </tr>
+                <tr>
+                  <td>Iván Alejandro</td>
+                  <td>Becerra Abarzúa</td>
+                  <td>Masculino</td>
+                  <td>SI</td>
+                  <td>Coder</td>
+                </tr>
+                <tr>
+                  <td>Rodrigo Alberto</td>
+                  <td>Chandía Cerna</td>
+                  <td>Masculino</td>
+                  <td>SI</td>
+                  <td>Coder</td>
+                </tr>
+                <tr>
+                  <td>Jorge Marcelo</td>
+                  <td>Contreras Rozas</td>
+                  <td>Masculino</td>
+                  <td>SI</td>
+                  <td>Coder</td>
+                </tr>
+                <tr>
+                  <td>Ximena Stephania</td>
+                  <td>Cortés Rodríguez</td>
+                  <td>Femenino</td>
+                  <td>NO</td>
+                  <td>Coder</td>
+                </tr>
+                <tr>
+                  <td>Cristian Alejandro</td>
+                  <td>Durán Ferreira</td>
+                  <td>Masculino</td>
+                  <td>SI</td>
+                  <td>Coder</td>
+                </tr>
+                <tr>
+                  <td>AW-Daniel</td>
+                  <td>Farías</td>
+                  <td>Masculino</td>
+                  <td>SI</td>
+                  <td>Instructor</td>
+                </tr>
+                <tr>
+                  <td>Oscar Ignacio</td>
+                  <td>Fernandez Sepúlveda</td>
+                  <td>Masculino</td>
+                  <td>SI</td>
+                  <td>Coder</td>
+                </tr>
+                <tr>
+                  <td>Jonathan Alejandro</td>
+                  <td>Gajardo Salinas</td>
+                  <td>Masculino</td>
+                  <td>SI</td>
+                  <td>Coder</td>
+                </tr>
+                <tr>
+                  <td>CO-Aniza</td>
+                  <td>Goenaga</td>
+                  <td>Femenino</td>
+                  <td>SI</td>
+                  <td>Coordinadora</td>
+                </tr>
+                <tr>
+                  <td>Carla Catherine</td>
+                  <td>Gutiérrez Melo</td>
+                  <td>Femenino</td>
+                  <td>SI</td>
+                  <td>Coder</td>
+                </tr>
+                <tr>
+                  <td>Livio Matías</td>
+                  <td>Gutiérrez Valdebenito</td>
+                  <td>Masculino</td>
+                  <td>SI</td>
+                  <td>Coder</td>
+                </tr>
+                <tr>
+                  <td>Soledad del Carmen</td>
+                  <td>Manríquez Godoy</td>
+                  <td>Femenino</td>
+                  <td>SI</td>
+                  <td>Coder</td>
+                </tr>
+                <tr>
+                  <td>AD-Nelson</td>
+                  <td>Medel</td>
+                  <td>Masculino</td>
+                  <td>SI</td>
+                  <td>Tutor</td>
+                </tr>
+                <tr>
+                  <td>Juan Carlos</td>
+                  <td>Merino Becerra</td>
+                  <td>Masculino</td>
+                  <td>SI</td>
+                  <td>Coder</td>
+                </tr>
+                <tr>
+                  <td>Nehemías Marvic</td>
+                  <td>Muñoz Monsalves</td>
+                  <td>Masculino</td>
+                  <td>SI</td>
+                  <td>Coder</td>
+                </tr>
+                <tr>
+                  <td>Cintia Del Carmen</td>
+                  <td>Muñoz Valdés</td>
+                  <td>Femenino</td>
+                  <td>SI</td>
+                  <td>Coder</td>
+                </tr>
+                <tr>
+                  <td>Alberto Eduardo</td>
+                  <td>Olivares Cortés</td>
+                  <td>Masculino</td>
+                  <td>SI</td>
+                  <td>Coder</td>
+                </tr>
+                <tr>
+                  <td>Génesis Paola</td>
+                  <td>Peña Guillén</td>
+                  <td>Femenino</td>
+                  <td>SI</td>
+                  <td>Coder</td>
+                </tr>
+                <tr>
+                  <td>Natalia Sofía</td>
+                  <td>Pérez Fierro</td>
+                  <td>Femenino</td>
+                  <td>SI</td>
+                  <td>Coder</td>
+                </tr>
+                <tr>
+                  <td>Manuel Fernando</td>
+                  <td>Pinot Friz</td>
+                  <td>Masculino</td>
+                  <td>SI</td>
+                  <td>Coder</td>
+                </tr>
+                <tr>
+                  <td>Sergio</td>
+                  <td>Plaza Espinoza</td>
+                  <td>Masculino</td>
+                  <td>SI</td>
+                  <td>Coder</td>
+                </tr>
+                <tr>
+                  <td>Marcia Alejandra</td>
+                  <td>Pozo Abaca</td>
+                  <td>Femenino</td>
+                  <td>SI</td>
+                  <td>Coder</td>
+                </tr>
+                <tr>
+                  <td>Ignacio Andrés</td>
+                  <td>Retamal Cid</td>
+                  <td>Masculino</td>
+                  <td>SI</td>
+                  <td>Coder</td>
+                </tr>
+                <tr>
+                  <td>Hans Sebastian</td>
+                  <td>Schiess Contreras</td>
+                  <td>Masculino</td>
+                  <td>SI</td>
+                  <td>Coder</td>
+                </tr>
+                <tr>
+                  <td>Inspector</td>
+                  <td>SOFOFA - ADALID</td>
+                  <td>Undefined</td>
+                  <td>SI</td>
+                  <td>N/A</td>
+                </tr>
+                <tr>
+                  <td>Unidad de Apoyo</td>
+                  <td>SOFOFA - ADALID</td>
+                  <td>Undefined</td>
+                  <td>SI</td>
+                  <td>N/A</td>
+                </tr>
+                <tr>
+                  <td>Cristian Quelem</td>
+                  <td>Trureo Gabello</td>
+                  <td>Masculino</td>
+                  <td>SI</td>
+                  <td>Coder</td>
+                </tr>
+                <tr>
+                  <td>Valentín Matías</td>
+                  <td>Urrea Meza</td>
+                  <td>Masculino</td>
+                  <td>SI</td>
+                  <td>Coder</td>
+                </tr>
+                <tr>
+                  <td>Leandro Alan</td>
+                  <td>Villalba</td>
+                  <td>Masculino</td>
+                  <td>SI</td>
+                  <td>Coder</td>
+                </tr>
+                <tr>
+                  <td>Luis Alejandro</td>
+                  <td>Zambrano Salazar</td>
+                  <td>Masculino</td>
+                  <td>SI</td>
+                  <td>Coder</td>
+                </tr>
               </tbody>
             </table>
           </div>
         </article>
       </section>
     </main>
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.js"></script>
+    <script src="js/estadisticas.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
